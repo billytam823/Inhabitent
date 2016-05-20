@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+
+
+// Fonts for Merriweather
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-light-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+//Fonts for Novecento Sans
+@font-face {
+    font-family: 'Novecento';
+    src: url('../fonts/Novecentosanswide-Normal.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Novecento';
+    src: url('../fonts/Novecentosanswide-DemiBold.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}

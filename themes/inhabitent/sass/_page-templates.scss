@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+
+/* Header Styles */
+.site-header{
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	background-color:rgba(255,255,255,0.8);
+	// position:fixed;
+	width:100%;
+	border-bottom:1px solid #eee;
+}
+
+.site-branding img{
+	height:50px;
+	width:50px;
+}
+
+.site-branding{
+	flex:1 0 15%;
+	
+	p{
+		margin:0;
+	}
+}
+
+.main-navigation{
+	flex:1 0 15%;
+
+	.menu{
+		margin-top:15px;
+		float:right;
+	}
+
+	li{
+		margin-right:10px;
+	}
+
+	a{
+		font-family:"Novecento", Arial, sans-serif;
+		color:#248A83;
+	}
+}
+
+/* Footer Styles */
+.site-footer{
+	background:url('../../images/dark-wood@2x.png') center;
+	background-size:cover;
+	min-height:300px;
+
+	.site-info{
+		text-align:center;
+		color:#fff;
+	}
+}
+
+
+/* Front page */
+.splash-image{
+	background:
+		linear-gradient( 
+				rgba(0,0,0,0.3),
+				rgba(0,0,0,0.3)
+			),
+		url(../../images/home-hero.jpg) center;
+	background-size:cover;
+	height:700px;
+	text-align:center;
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content:center;
+}
