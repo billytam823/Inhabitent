@@ -29,15 +29,13 @@ function inhabitent_remove_submenus() {
 }
 add_action( 'admin_init', 'inhabitent_remove_submenus', 102 );
 
-//Changes the logo off wordpress in the login page
-function my_custom_login_logo() {
-     echo '
-     <style type="text/css">                                                                   
-         h1 a { background-image:url('.get_stylesheet_directory_uri().'/images/logos/inhabitent-logo-text-dark.svg) !important; background-size:300px !important; width:auto !important;}                          
 
-     </style>';
+//Add a stylesheet login page
+function inhabitent_custom_login() {
+    echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/build/css/customlogin.css" />';
 }
-add_action('login_head', 'my_custom_login_logo');
+add_action('login_head', 'inhabitent_custom_login');
+
 
 //Links the logo to the homepage
 function inhabitent_login_logo( $url ) {
@@ -45,9 +43,10 @@ function inhabitent_login_logo( $url ) {
 }
 add_filter( 'login_headerurl', 'inhabitent_login_logo' );
 
-//
-function inhabitent_login_logo_url_title(){
-	return 'Inhabitent';
+
+//Changes the "login message"
+function inhabitent_login_title(){
+    return 'Return to home page';
 }
 
-add_filter( 'login_message', 'inhabitent_login_logo_url_title');
+add_filter( 'login_headertitle', 'inhabitent_login_title');
