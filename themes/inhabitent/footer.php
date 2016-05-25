@@ -14,8 +14,17 @@
 
 					<div class="footer-contact-info">
 						<h3>Contact Info</h3>
-						<p><a href="#"><i></i>info@inhabitent.com</a></p>
-						<p><i></i>778-458-7891</p>
+						<p><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@inhabitent.com</a></p>
+						<p><i class="fa fa-phone" aria-hidden="true"></i>778-458-7891</p>
+						<p>
+							<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+							
+							<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+							<a href="#"></a>
+
+							<a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+							<a href="#"></a>
+						</p>
 					</div>
 
 					<div class="footer-business-hour">

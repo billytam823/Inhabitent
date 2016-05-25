@@ -50,3 +50,40 @@ function inhabitent_login_title(){
 }
 
 add_filter( 'login_headertitle', 'inhabitent_login_title');
+
+
+//Custom Function for setting Featured Image as Splash for About Page
+function inhabitent_about_splash_bg() {
+       	
+		if(!is_page_template('page-about.php')){
+			return;
+		}
+
+        $custom_css = 
+        		".about-splash{
+                        background:
+                        	linear-gradient( 
+								rgba(0,0,0,0.4),
+								rgba(0,0,0,0.4)
+							),
+                        	url('". CFS()->get('splash_banner') ."');
+                        background-size:cover;
+                        background-position:bottom;
+                }";
+        wp_add_inline_style( 'inhabitent-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_about_splash_bg' );
+
+//Custom function to change query to display more posts altering main query
+function inhabitent_filter_product_query($query){
+
+	if( is_post_type_archive('product.php') && !is_admin() && $query->is_main_query() ){
+		$query->set('orderby','title');
+		$query->set('orderby','ASC');
+		$query->set('posts_per_page', 1);
+	}
+
+}
+add_action( 'pre_get_posts', 'inhabitent_filter_product_query' );
+
+

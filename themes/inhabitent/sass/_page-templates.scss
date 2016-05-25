@@ -3,9 +3,14 @@
 --------------------------------------------------------------*/
 
 .container{
-		max-width:1200px;
-		margin:0 auto;
-	}
+	max-width:1200px;
+	margin:0 auto;
+}
+
+.small-container{
+	max-width:900px;
+	margin:0 auto;
+}
 
 /* Sidebar Styles */
 .widget-area{
@@ -47,7 +52,7 @@
 	}
 
 	li{
-		margin-right:20px;
+		margin-left:20px;
 	}
 
 	a{
@@ -90,20 +95,126 @@
 
 
 /* Front page */
-.splash-image{
-	background:
-		linear-gradient( 
-				rgba(0,0,0,0.3),
-				rgba(0,0,0,0.3)
-			),
-		url(../../images/home-hero.jpg) center;
-	background-size:xcover;
-	height:700px;
-	text-align:center;
-	display:flex;
-	flex-flow: row nowrap;
-	justify-content:center;
+
+.home{
+
+	.splash-image{
+		background:
+			linear-gradient( 
+					rgba(0,0,0,0.3),
+					rgba(0,0,0,0.3)
+				),
+			url(../../images/home-hero.jpg) center;
+		background-size:cover;
+		height:700px;
+		text-align:center;
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content:center;
+	}
+
+	//styles for the shop stuff section
+	.shop-stuff-section{
+		margin-top:40px;
+		margin-bottom:40px;
+
+		h2{
+			text-align:center;
+		}
+
+		.shop-stuff-container{
+			width:90%;
+			margin:0 auto;
+			display:flex;
+			flex-flow: row nowrap;
+			justify-content:space-between;
+
+			.shop-stuff-item{
+				text-align:center;
+				width:250px;
+				border:1px solid #ddd;
+				border-top:4px solid #ddd;
+				padding:20px 10px;
+
+				&:hover{
+					border-color:#d99054;
+				}
+
+				img{
+					width:70px;
+				}
+
+				a{
+					text-transform:uppercase;
+					display:inline-block;
+					padding:5px 25px;
+					color:#fff;
+					background-color:$inhabitent_green;
+				}
+			}
+
+		}
+
+	}
+
+	.blog-titles{
+		margin: 0 auto;
+	}
+
+	.blog-image img{
+		width:300px;
+		height:auto;
+	}
+	
+
+	//Styles for the inhabitent section
+	.inhabitent-journal-section{
+
+		h2{
+			text-align:center;
+		}
+
+		.inhabitent-journal-container{
+			display:flex;
+			justify-content:space-between;
+			margin-bottom:25px;
+
+			.inhabitent-journal-item{
+				flex:0 1 32%;
+
+				img{
+					height:240px;
+					width:100%;
+				}
+
+				.inhabitent-journal-item-info{
+					padding:20px;
+					border:1px solid #ddd;
+					border-top:4px solid #ddd;
+					margin-top:-7px;
+
+					h3{
+						color:$inhabitent_green;
+						font-size:1.6em;
+						line-height:1.2em;
+					}
+
+					a{
+						color:$color__text-main;
+						padding:10px 20px;
+						text-transform:uppercase;
+						border: 1px solid $color__text-main;
+					}
+
+				}
+			}
+		}
+	
+	}
+
 }
+
+
 
 /* Blog List Page */
 .blog .site-content{
@@ -130,6 +241,7 @@
 			position:absolute;
 			top:30px;
 			width:70%;
+			font-size:1.5em;
 			text-transform:uppercase;
 			background-color: $inhabitent_green;
 			padding:10px;
@@ -172,8 +284,9 @@
 
 		h1{
 			position:absolute;
-			top:30px;
+			top:50px;
 			width:70%;
+			margin:0;
 			text-transform:uppercase;
 			background-color: $inhabitent_green;
 			padding:10px;
@@ -204,5 +317,41 @@
 
 	.post-navigation{
 		display:none;
+	}
+}
+
+/* About Page Styles */
+.page-template-page-about{
+	
+	h2{
+		text-align:center;
+	}
+
+	.about-splash{
+		height:800px;	
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content:center;
+
+		h1{
+			text-align:center;
+			color:#fff;
+			font-size:1.8em;
+			text-transform:uppercase;
+		}
+	}
+}
+
+/* Product Archive Styles */
+.post-type-archive{
+	
+	.product-list{
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-between;
+
+		.product-item{
+			flex:1 1 25%;
+		}
 	}
 }

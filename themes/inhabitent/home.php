@@ -1,7 +1,7 @@
 <?php
 /**
- * The template for displaying all pages.
- *
+ * The template for displaying home page
+
  * @package RED_Starter_Theme
  */
 
