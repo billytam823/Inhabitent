@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="footer-logo">
-						<a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/logos/inhabitent-logo-text.svg"></a>
+						<a href="/inhabitent"><img src="<?php bloginfo('template_directory'); ?>/images/logos/inhabitent-logo-text.svg"></a>
 					</div>
 
 				</div><!-- .site-info -->

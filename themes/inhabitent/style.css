@@ -379,7 +379,9 @@ a {
   text-decoration: none; }
 
 h1 {
-  font-size: 1.5em; }
+  font-size: 2.5em;
+  margin: 50px 0 30px;
+  text-transform: uppercase; }
 
 h2 {
   color: #2f1339;
@@ -732,6 +734,9 @@ object {
   border-left: 1px solid #eee;
   padding-left: 60px; }
 
+.day-of-week {
+  font-weight: 600; }
+
 /* Header Styles */
 .site-header {
   display: -ms-flexbox;
@@ -771,7 +776,8 @@ object {
 .site-footer {
   background: url("../../images/dark-wood@2x.png") center;
   min-height: 300px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  margin-top: 80px; }
   .site-footer .site-info {
     color: #fff;
     display: -ms-flexbox;
@@ -803,7 +809,7 @@ object {
 .home .splash-image {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../images/home-hero.jpg) center;
   background-size: cover;
-  height: 700px;
+  height: 900px;
   text-align: center;
   display: -ms-flexbox;
   display: flex;
@@ -818,7 +824,6 @@ object {
   .home .shop-stuff-section h2 {
     text-align: center; }
   .home .shop-stuff-section .shop-stuff-container {
-    width: 90%;
     margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
@@ -828,7 +833,7 @@ object {
         justify-content: space-between; }
     .home .shop-stuff-section .shop-stuff-container .shop-stuff-item {
       text-align: center;
-      width: 250px;
+      width: 280px;
       border: 1px solid #ddd;
       border-top: 4px solid #ddd;
       padding: 20px 10px; }
@@ -940,7 +945,8 @@ object {
       text-transform: uppercase;
       background-color: #248A83;
       padding: 10px;
-      color: #fff; }
+      color: #fff;
+      font-size: 1.5em; }
     .single-post .site-content .entry-header .entry-meta {
       text-align: right;
       position: absolute;
@@ -978,6 +984,22 @@ object {
     text-transform: uppercase; }
 
 /* Product Archive Styles */
+.post-type-archive h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 50px 0 30px;
+  text-transform: uppercase; }
+
+.post-type-archive .product-taxonomy-links {
+  margin-bottom: 50px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 50px;
+  text-align: center; }
+  .post-type-archive .product-taxonomy-links a {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 15px; }
+
 .post-type-archive .product-list {
   display: -ms-flexbox;
   display: flex;
@@ -986,5 +1008,72 @@ object {
   -ms-flex-pack: justify;
       justify-content: space-between; }
   .post-type-archive .product-list .product-item {
-    -ms-flex: 1 1 25%;
-        flex: 1 1 25%; }
+    -ms-flex: 0 1 23%;
+        flex: 0 1 23%;
+    margin-bottom: 30px;
+    max-width: 23%;
+    border: 1px solid #e1e1e1; }
+    .post-type-archive .product-list .product-item .product-image-link {
+      height: 250px;
+      overflow: hidden;
+      position: relative; }
+      .post-type-archive .product-list .product-item .product-image-link img {
+        left: 50%;
+        max-height: 250px;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -52%);
+        width: auto; }
+    .post-type-archive .product-list .product-item .product-item-info {
+      display: -ms-flexbox;
+      display: flex;
+      padding: 5px 10px;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+/* Single Product Page Styles*/
+.single-product .product-container {
+  margin: 60px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .single-product .product-container .product-image {
+    -ms-flex: 0 1 46%;
+        flex: 0 1 46%; }
+  .single-product .product-container .product-info {
+    -ms-flex: 0 1 50%;
+        flex: 0 1 50%; }
+    .single-product .product-container .product-info h1 {
+      font-size: 1.9em;
+      text-transform: uppercase;
+      color: #d99054;
+      margin-top: 0; }
+    .single-product .product-container .product-info .product-price {
+      font-weight: 600;
+      font-size: 1.4em;
+      display: block;
+      margin-bottom: 40px; }
+
+/* Taxonomy Page Styes */
+.tax-product_type h1 {
+  text-align: center; }
+
+.tax-product_type .taxonomy-description {
+  margin-bottom: 50px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 40px;
+  text-align: center; }
+
+/* Contact Page Styles */
+.page-template-page-contact .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .page-template-page-contact .site-content #primary {
+    padding-top: 60px;
+    padding-right: 60px; }

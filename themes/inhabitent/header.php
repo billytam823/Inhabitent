@@ -24,7 +24,7 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-header container">
 					<div class="site-branding">
-						<p><a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/logos/inhabitent-logo-tent.svg"></a></p>
+						<p><a href="/inhabitent"><img src="<?php bloginfo('template_directory'); ?>/images/logos/inhabitent-logo-tent.svg"></a></p>
 					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">

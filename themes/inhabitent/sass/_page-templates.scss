@@ -19,6 +19,10 @@
 	padding-left:60px;
 }
 
+.day-of-week{
+	font-weight:600;	
+}
+
 /* Header Styles */
 .site-header{
 	display:flex;
@@ -67,6 +71,7 @@
 	background:url('../../images/dark-wood@2x.png') center;
 	min-height:300px;
 	padding-bottom:20px;
+	margin-top:80px;
 
 	.site-info{
 		color:#fff;
@@ -95,7 +100,6 @@
 
 
 /* Front page */
-
 .home{
 
 	.splash-image{
@@ -106,7 +110,7 @@
 				),
 			url(../../images/home-hero.jpg) center;
 		background-size:cover;
-		height:700px;
+		height:900px;
 		text-align:center;
 		display:flex;
 		flex-flow: row nowrap;
@@ -123,7 +127,6 @@
 		}
 
 		.shop-stuff-container{
-			width:90%;
 			margin:0 auto;
 			display:flex;
 			flex-flow: row nowrap;
@@ -131,7 +134,7 @@
 
 			.shop-stuff-item{
 				text-align:center;
-				width:250px;
+				width:280px;
 				border:1px solid #ddd;
 				border-top:4px solid #ddd;
 				padding:20px 10px;
@@ -291,6 +294,7 @@
 			background-color: $inhabitent_green;
 			padding:10px;
 			color:#fff;
+			font-size:1.5em;
 		}
 
 		.entry-meta{
@@ -344,14 +348,126 @@
 
 /* Product Archive Styles */
 .post-type-archive{
-	
+
+	h1{
+		text-align:center;
+		font-size:2.5em;
+		margin:50px 0 30px;
+		text-transform:uppercase;
+	}
+
+	.product-taxonomy-links{
+		margin-bottom:50px;
+		border-bottom:1px dashed #ccc;
+		padding-bottom:50px;
+		text-align:center;
+
+		a{
+			text-transform:uppercase;
+			font-size:1.5em;
+			margin:0 15px;
+		}
+	}
+
 	.product-list{
 		display:flex;
 		flex-flow:row wrap;
 		justify-content:space-between;
 
+		
 		.product-item{
-			flex:1 1 25%;
+			flex:0 1 23%;
+			margin-bottom:30px;
+			max-width:23%;
+			border:1px solid #e1e1e1;	
+
+			.product-image-link{	
+				height:250px;
+				overflow:hidden;
+				position:relative;
+				
+				img{
+					left: 50%;
+				    max-height: 250px;
+				    max-width: none;
+				    position: absolute;
+				    top: 50%;
+				    -webkit-transform: translate(-50%,-52%);
+				    transform: translate(-50%,-52%);
+				    width: auto;
+				}
+			}
+
+			.product-item-info{
+				display:flex;
+				padding:5px 10px;
+				justify-content:space-between;
+			}
 		}
 	}
 }
+
+/* Single Product Page Styles*/
+.single-product{
+
+	.product-container{
+		margin:60px 0;
+		display:flex;
+		justify-content:space-between;
+
+		.product-image{
+			flex:0 1 46%;
+		}
+
+		.product-info{
+			flex:0 1 50%;
+
+			h1{
+				font-size:1.9em;
+				text-transform:uppercase;
+				color:#d99054;
+				margin-top:0;
+			}
+
+			.product-price{
+				font-weight:600;
+				font-size:1.4em;
+				display:block;
+				margin-bottom:40px;
+			}
+		}
+	}
+
+}
+
+/* Taxonomy Page Styes */
+.tax-product_type{
+
+	h1{
+		text-align:center;
+	}
+
+	.taxonomy-description{
+		margin-bottom:50px;
+		border-bottom:1px dashed #ccc;
+		padding-bottom:40px;
+		text-align:center;
+	}
+
+}
+
+/* Contact Page Styles */
+.page-template-page-contact .site-content{
+	display:flex;
+	flex-flow:row nowrap;
+	max-width:1200px;
+	margin:0 auto;
+
+	#primary{
+		padding-top:60px;
+		padding-right:60px;
+	}
+
+}
+
+

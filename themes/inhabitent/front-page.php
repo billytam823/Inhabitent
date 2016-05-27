@@ -14,31 +14,35 @@ get_header(); ?>
 			<div class="splash-image">
 				<img src="<?php bloginfo('template_directory'); ?>/images/logos/inhabitent-logo-full.svg">
 			</div>
+		
 
 			<!-- Shop Stuff Section -->
 			<div class="shop-stuff-section container">
 				<h2>Shop Stuff</h2>
 				<div class="shop-stuff-container">
-					<div class="shop-stuff-item">
-						<img src="<?php bloginfo('template_directory'); ?>/images/product-type-icons/do.svg">
-						<p>Get back to nature with all the tools and toys you need to enjoy the great outdoors.</p>
-						<a href="#">Do Stuff</a>
-					</div>
-					<div class="shop-stuff-item">
-						<img src="<?php bloginfo('template_directory'); ?>/images/product-type-icons/eat.svg">
-						<p>Nothing beats food cooked over a fire. We have all you need for good camping eat.</p>
-						<a href="#">Eat Stuff</a>
-					</div>
-					<div class="shop-stuff-item">
-						<img src="<?php bloginfo('template_directory'); ?>/images/product-type-icons/sleep.svg">
-						<p>Get a good night's rest in home away from home that travels well</p>
-						<a href="#">Sleep Stuff</a>
-					</div>
-					<div class="shop-stuff-item">
-						<img src="<?php bloginfo('template_directory'); ?>/images/product-type-icons/wear.svg">
-						<p>From flannel shirts to toques, looks the part while roughing it in the great outdoors.</p>
-						<a href="#">Wear Stuff</a>
-					</div>
+
+					<!-- getting the posts for adventure -->
+						<?php
+						   $terms = get_terms( array('taxonomy' => 'product_type') );
+						?>
+
+						<?php foreach ( $terms as $term ): ?>
+							<div class="shop-stuff-item">
+								
+								<?php echo //Getting the Image using the Taxonomy Array
+								'<img src="'
+								. get_bloginfo('template_directory') . '/images/product-type-icons/'
+								. $term->slug . '.svg">';
+								?>
+				
+								<p><?php echo $term->description ?></p>
+
+								<?php echo //Getting the link using the Taxonomy Array
+									'<a href="'. get_term_link($term, 'product_type') .'">'
+									. $term ->slug . ' Stuff</a>';
+								?>
+							</div>								
+						<?php endforeach; ?>
 				</div>
 			</div>
 			
@@ -59,13 +63,12 @@ get_header(); ?>
 
 					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 
-
 					<div class="inhabitent-journal-item">
 						<?php the_post_thumbnail(); ?>
 						<div class="inhabitent-journal-item-info">
 							<span><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?></span>
 							<h3><?php the_title() ?></h3>
-							<a href="#">Read Entry</a>
+							<?php echo '<a href="inhabitent/'. $post->post_name .'">Read Entry</a>' ?>
 						</div>
 					</div>
 
@@ -76,7 +79,7 @@ get_header(); ?>
 			</div>
 
 			<!-- getting the posts for adventure -->
-			<?php
+			<!-- <?php
 			   $args = array( 'post_type' => 'post', 
 			   				  'order' => 'DSC',
 			   				  'posts_per_page' => 3	 );
@@ -91,7 +94,7 @@ get_header(); ?>
 			   		echo '<a href="#">READ MORE</a>';
 			    ?>
 
-			<?php endforeach; wp_reset_postdata(); ?>
+			<?php endforeach; wp_reset_postdata(); ?> -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
