@@ -7,12 +7,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area container">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-				<h1> Shop Stuff </h1>
+				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 				
-				<div class="product-taxonomy-links container">
+				<div class="product-taxonomy-links">
 				<!-- Loop for retrieving Product Taxonomy links -->
 				<?php $terms = get_terms( array('taxonomy' => 'product_type') );
 				   foreach ( $terms as $term ): ?>
@@ -39,20 +39,20 @@ get_header(); ?>
 					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 							
 							<div class="product-item">
+		
+								<div class="product-image-link">
 									<?php if ( has_post_thumbnail() ) : ?>
-										
-										<div class="product-image-link">
-										<a href="'<?php echo esc_url(get_permalink()) ?>'">
-										<?php echo the_post_thumbnail( 'large' ); ?>
-										</a></div>
+										<a href="<?php echo esc_url(get_permalink()) ?>">
+									<?php echo the_post_thumbnail( 'large' ); ?>
+									</a></div>
 
-									<?php endif; ?>
+								<?php endif; ?>
 
-									<div class="product-item-info">
-										<span><?php the_title() ?></span>
-										<span><?php echo CFS()->get('price') ?></span>
-									</div>
-							
+								<div class="product-item-info">
+									<span class="product-title"><?php the_title() ?></span>
+									<span class="product-price">$<?php echo CFS()->get('price') ?></span>
+								</div>
+					
 
 							</div><!-- .entry-content -->
 

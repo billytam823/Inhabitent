@@ -19,7 +19,7 @@ function inhabitent_register_product_cpt() {
 		'singular_name'         => 'Product',
 		'menu_name'             => 'Products',
 		'name_admin_bar'        => 'Product',
-		'archives'              => 'Item Archives',
+		'archives'              => 'Product Archives',
 		'parent_item_colon'     => 'Parent Product:',
 		'all_items'             => 'All Product',
 		'add_new_item'          => 'Add New Product',

@@ -18,7 +18,7 @@ get_header(); ?>
 			
 					<!-- Prints the Thumbnail of the Post -->
 					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'large' ); ?>
+						<?php the_post_thumbnail( 'full' ); ?>
 					<?php endif; ?>
 
 					<!-- Prints the tTitle -->
@@ -51,5 +51,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

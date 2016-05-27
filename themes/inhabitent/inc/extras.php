@@ -86,6 +86,12 @@ function inhabitent_filter_product_query($query){
 }
 add_action( 'pre_get_posts', 'inhabitent_filter_product_query' );
 
+//Custom function to change shop title
+function my_category_archive_title() {
+    return 'Shop Stuff';
+}
+add_filter('get_the_archive_title', 'my_category_archive_title');
+
 /**
  * Customize excerpt length and style.
  *
@@ -139,4 +145,5 @@ remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'red_wp_trim_excerpt' );
 
 ?>
+
 	

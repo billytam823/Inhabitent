@@ -49,10 +49,10 @@ get_header(); ?>
 
 
 			<!-- Inhabitent Journal Section -->
-			<div class="inhabitent-journal-section container">
+			<div class="home-journal-section container">
 				<h2>Inhabitent Journal</h2>
 				
-				<div class="inhabitent-journal-container">
+				<div class="home-journal-container">
 					
 					<?php
 					   $args = array( 'post_type' => 'post', 
@@ -63,9 +63,9 @@ get_header(); ?>
 
 					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 
-					<div class="inhabitent-journal-item">
+					<div class="home-journal-item">
 						<?php the_post_thumbnail(); ?>
-						<div class="inhabitent-journal-item-info">
+						<div class="home-journal-item-info">
 							<span><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?></span>
 							<h3><?php the_title() ?></h3>
 							<?php echo '<a href="inhabitent/'. $post->post_name .'">Read Entry</a>' ?>
@@ -79,23 +79,25 @@ get_header(); ?>
 			</div>
 
 			<!-- getting the posts for adventure -->
-			<!-- <?php
-			   $args = array( 'post_type' => 'post', 
+			<?php
+			   $args = array( 'post_type' => 'adventure', 
 			   				  'order' => 'DSC',
-			   				  'posts_per_page' => 3	 );
+			   				  'posts_per_page' => 4	 );
 			   $product_posts = get_posts( $args ); // returns an array of posts
 			?>
+			<div class="latest-adventure-section container">
+				<h1>Latest Adventure</h1>
+				<div class="latest-adventure-content">
+					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+					
+					   <div class="latest-adventure-item" style="background:url('<?php echo get_the_post_thumbnail_url() ?>');">
+					   <h3><?php echo get_the_title() ?></h3>
+					   <a href="#">READ MORE</a>
+					   </div>
 
-			<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-		
-			   <?php 
-			   		echo '<div class="blog-image">' . get_the_post_thumbnail() . '</div>';
-			   		echo '<div class="blog-titles">' . get_the_title() . '</div>';
-			   		echo '<a href="#">READ MORE</a>';
-			    ?>
-
-			<?php endforeach; wp_reset_postdata(); ?> -->
-
+					<?php endforeach; wp_reset_postdata(); ?>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

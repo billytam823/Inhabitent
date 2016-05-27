@@ -3,13 +3,29 @@
 --------------------------------------------------------------*/
 
 .container{
-	max-width:1200px;
+	max-width:1220px;
 	margin:0 auto;
+	padding:0 10px;
 }
 
 .small-container{
 	max-width:900px;
 	margin:0 auto;
+}
+
+// Padding for the top navigation
+.site-content{
+	padding-top:60px;
+	display:flex;
+	flex-flow:row nowrap;
+	max-width:1200px;
+	margin:0 auto;
+}
+
+// Remove padding for pages with Splash/Hero 
+.home .site-content,
+.page-template-page-about .site-content{
+	padding-top:0;
 }
 
 /* Sidebar Styles */
@@ -25,13 +41,17 @@
 
 /* Header Styles */
 .site-header{
-	display:flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
 	background-color:rgba(255,255,255,0.8);
-	// position:fixed;
+	position:fixed;
 	width:100%;
 	border-bottom:1px solid #eee;
+	z-index:999;
+
+	.container{
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
 }
 
 .site-branding img{
@@ -49,10 +69,13 @@
 
 .main-navigation{
 	flex:1 0 15%;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-end;
 
 	.menu{
 		margin-top:15px;
-		float:right;
+		text-align:right;
 	}
 
 	li{
@@ -63,6 +86,38 @@
 		font-family:"Novecento", Arial, sans-serif;
 		color:#248A83;
 		text-transform:uppercase;
+	}
+
+	form{
+		display:inline-block;
+
+		fieldset{
+			margin:0; 
+			padding:0;
+			border:none;
+			margin-left:20px;
+			position:relative;
+			top:12px;
+		}
+
+		i{
+			position:relative;
+			top:-2px;
+		}
+
+		button{
+			border:none;
+			background:none;
+			box-shadow:none;	
+			text-shadow:none;
+			padding:0;
+		}
+
+		input{
+			border:none;
+			background:none;
+			width:100px
+		}
 	}
 }
 
@@ -101,6 +156,13 @@
 
 /* Front page */
 .home{
+	.site-content{
+		max-width:100%;	
+	}
+	
+	#primary{
+		width:100%;
+	}
 
 	.splash-image{
 		background:
@@ -159,30 +221,21 @@
 		}
 
 	}
-
-	.blog-titles{
-		margin: 0 auto;
-	}
-
-	.blog-image img{
-		width:300px;
-		height:auto;
-	}
 	
 
 	//Styles for the inhabitent section
-	.inhabitent-journal-section{
+	.home-journal-section{
 
 		h2{
 			text-align:center;
 		}
 
-		.inhabitent-journal-container{
+		.home-journal-container{
 			display:flex;
 			justify-content:space-between;
 			margin-bottom:25px;
 
-			.inhabitent-journal-item{
+			.home-journal-item{
 				flex:0 1 32%;
 
 				img{
@@ -190,7 +243,7 @@
 					width:100%;
 				}
 
-				.inhabitent-journal-item-info{
+				.home-journal-item-info{
 					padding:20px;
 					border:1px solid #ddd;
 					border-top:4px solid #ddd;
@@ -215,16 +268,39 @@
 	
 	}
 
+	.latest-adventure-section{
+		
+		.latest-adventure-content{
+			display:flex;
+			flex-flow:column nowrap;
+
+			.latest-adventure-item{
+
+				&:nth-child(1){
+					flex:0 1 50%;
+				}
+
+				&:nth-child(2){
+					flex:0 1 25%;
+				}
+
+				&:nth-child(3){
+					flex:0 1 10%;
+				}
+
+				&:nth-child(4){
+					flex:0 1 10%;
+				}
+			}
+		}
+	}
+
 }
 
 
 
 /* Blog List Page */
-.blog .site-content{
-	display:flex;
-	flex-flow:row nowrap;
-	max-width:1200px;
-	margin:0 auto;
+.blog{
 	
 	#primary{
 		padding-top:60px;
@@ -267,17 +343,13 @@
 }
 
 /* Indivitual Blog List Page */
-.single-post .site-content{
-	display:flex;
-	flex-flow:row nowrap;
-	max-width:1200px;
-	margin:0 auto;
+.single-post {
 
 	#primary{
 		padding-top:60px;
 		padding-right:60px;
 	}
-
+	
 	.entry-header{
 		position:relative;
 
@@ -327,6 +399,15 @@
 /* About Page Styles */
 .page-template-page-about{
 	
+	.site-content{
+		max-width:100%;
+
+	#primary{
+		flex:1 0 100%;
+		}
+
+	}
+
 	h2{
 		text-align:center;
 	}
@@ -399,9 +480,26 @@
 			}
 
 			.product-item-info{
-				display:flex;
 				padding:5px 10px;
-				justify-content:space-between;
+				
+				.product-title{
+					padding-right:3px;
+					display:inline;
+					background:#fff;
+
+						&:before{
+					    float: left;
+ 					    width: 0;
+    					white-space: nowrap;
+    					content: ".......................................................";
+    					}
+				}
+
+				.product-price{
+					float:right;
+					background-color:#fff;
+				}
+
 			}
 		}
 	}
@@ -442,6 +540,10 @@
 
 /* Taxonomy Page Styes */
 .tax-product_type{
+	
+	#primary{
+		flex:1 0 100%;
+	}
 
 	h1{
 		text-align:center;
@@ -453,21 +555,74 @@
 		padding-bottom:40px;
 		text-align:center;
 	}
+	
+	.taxonomy-product-list{
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-between;
 
+		
+		.taxonomy-product-item{
+			flex:0 1 23%;
+			margin-bottom:30px;
+			max-width:23%;
+			border:1px solid #e1e1e1;	
+
+			.taxonomy-product-image-link{	
+				height:250px;
+				overflow:hidden;
+				position:relative;
+				
+				img{
+					left: 50%;
+				    max-height: 250px;
+				    max-width: none;
+				    position: absolute;
+				    top: 50%;
+				    -webkit-transform: translate(-50%,-52%);
+				    transform: translate(-50%,-52%);
+				    width: auto;
+				}
+			}
+
+			.taxonomy-product-item-info{
+				display:flex;
+				padding:5px 10px;
+				justify-content:space-between;
+			}
+		}
+	}
 }
 
 /* Contact Page Styles */
-.page-template-page-contact .site-content{
-	display:flex;
-	flex-flow:row nowrap;
-	max-width:1200px;
-	margin:0 auto;
+.page-template-page-contact{
 
 	#primary{
 		padding-top:60px;
 		padding-right:60px;
 	}
 
+	h1{
+		margin-top:0;
+	}
+
+}
+
+/* Search Page Styles */
+.search{
+	#primary{
+		flex:1 0 60%;
+		padding-right:60px;
+	}
+}
+
+/* Missing Page (404) Styles */
+.error404{
+
+	#primary{
+		flex:1 0 60%;
+		padding-right:60px;
+	}
 }
 
 
