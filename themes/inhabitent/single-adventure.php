@@ -14,27 +14,29 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-			
-					<!-- Prints the Thumbnail of the Post -->
-					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'full' ); ?>
-					<?php endif; ?>
+				
+				<div class="adventure-splash">
+				<!-- Prints the Thumbnail of the Post -->
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( 'full' ); ?>
+				<?php endif; ?>
+				</div>
 
+				<div class="small-container">
 					<!-- Prints the tTitle -->
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 
 					<!-- Entry Meta, Posted on / Comment / Author -->
 					<div class="entry-meta">
-						<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
+						<?php red_starter_posted_by(); ?>
 					</div>
-				</header>
 
+					<!-- Prints the Content -->
+					<div class="entry-content">
+						<?php the_content(); ?>
+					</div>
 
-				<!-- Prints the Content -->
-				<div class="entry-content">
-					<?php the_content(); ?>
 				</div>
 
 			</article>

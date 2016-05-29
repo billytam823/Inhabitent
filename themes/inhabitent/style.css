@@ -403,7 +403,8 @@ i {
   margin-right: 10px; }
 
 p, span {
-  font-family: 'Merriweather',serif; }
+  font-family: 'Merriweather',serif;
+  margin-bottom: 1.5rem; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -776,6 +777,8 @@ object {
     color: #fff;
     border-color: #248A83;
     background-color: #248A83; }
+  .read-more:visited {
+    color: #000; }
 
 /* Header Styles */
 .site-header {
@@ -844,10 +847,14 @@ object {
       border: none;
       background: none;
       width: 100px; }
-  .main-navigation .search-field {
-    outline: none;
-    height: 20px;
-    width: auto; }
+    .main-navigation form .search-submit {
+      display: inline-block;
+      cursor: pointer; }
+    .main-navigation form .search-field {
+      outline: none;
+      height: 20px;
+      width: auto;
+      display: none; }
 
 /* Footer Styles */
 .site-footer {
@@ -959,6 +966,35 @@ object {
           color: #000; }
         .home .home-journal-section .home-journal-container .home-journal-item .home-journal-item-info h3 a:visited {
           color: #248A83; }
+
+.home .latest-adventure-section .adventure-flex-1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; }
+  .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 {
+    -ms-flex: 1 1 50%;
+        flex: 1 1 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap; }
+    .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-flex-3 {
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
+.home .latest-adventure-section .adventure-content {
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+  background-size: cover;
+  background-position: center; }
+
+.home .latest-adventure-section .adventure-info {
+  margin: 25px; }
 
 /* Blog List Page */
 .blog #primary {
@@ -1222,8 +1258,29 @@ object {
       flex: 1 0 60%;
   padding-right: 60px; }
 
+.search .search-pagination .page-numbers {
+  background-color: #248A83;
+  padding: 5px 10px;
+  color: #fff; }
+
+.search .search-pagination .current {
+  background-color: gray;
+  font-family: 'Novecento',sans-serif; }
+
 /* Missing Page (404) Styles */
 .error404 #primary {
   -ms-flex: 1 0 60%;
       flex: 1 0 60%;
   padding-right: 60px; }
+
+/* Individual Adventure Page styles */
+.single-adventure .site-content {
+  max-width: 100%; }
+  .single-adventure .site-content #primary {
+    -ms-flex: 1 0 100%;
+        flex: 1 0 100%; }
+
+.single-adventure .entry-meta {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-family: 'Novecento', sans-serif; }

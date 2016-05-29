@@ -81,29 +81,55 @@ get_header(); ?>
 			<!-- getting the posts for adventure -->
 			<?php
 			   $args = array( 'post_type' => 'adventure', 
-			   				  'order' => 'DSC',
+			   				  'order' => 'ASC',
 			   				  'posts_per_page' => 4	 );
 			   $product_posts = get_posts( $args ); // returns an array of posts
 			?>
 			<div class="latest-adventure-section container">
-				<?php 
-					echo '<pre>';
-					print_r($product_posts);
-					echo '</pre>';
+				
+				<div class="adventure-flex-1">
 
-					echo $product_posts[2]->post_title;
-				 ?>
-				<!-- <h1>Latest Adventure</h1>
-				<div class="latest-adventure-content">
-					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+					<!-- Inside First Flex Box -->	
+					<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+						 <div class="adventure-info">
+							 <h2><a href="<?php echo $product_posts[0]->guid; ?>"><?php echo $product_posts[0]->post_title; ?></a></h2>
+							 <a class="read-more" href="<?php echo $product_posts[0]->guid; ?>">Read More</a>
+						 </div>
+					</div>
 					
-					   <div class="latest-adventure-item" style="background:url('<?php echo get_the_post_thumbnail_url() ?>');">
-					   <h3><?php echo get_the_title() ?></h3>
-					   <a href="#">READ MORE</a>
-					   </div>
+					<div class="adventure-flex-2">
 
-					<?php endforeach; wp_reset_postdata(); ?>
-				</div> -->
+						<!-- Inside Second Flex Box -->
+						<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+							 <div class="adventure-info">
+								 <h2><a href="<?php echo $product_posts[2]->guid; ?>"><?php echo $product_posts[2]->post_title; ?></a></h2>
+								 <a class="read-more" href="<?php echo $product_posts[2]->guid; ?>">Read More</a>
+							 </div>
+						</div>
+						
+						<div class="adventure-flex-3">
+
+							<!-- INside Third Flex Box -->
+							<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+								 <div class="adventure-info">
+									 <h2><a href="<?php echo $product_posts[2]->guid; ?>"><?php echo $product_posts[2]->post_title; ?></a></h2>
+									 <a class="read-more" href="<?php echo $product_posts[2]->guid; ?>">Read More</a>
+								 </div>
+							</div>
+
+							<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+								 <div class="adventure-info">
+									 <h2><a href="<?php echo $product_posts[3]->guid; ?>"><?php echo $product_posts[3]->post_title; ?></a></h2>
+									 <a class="read-more" href="<?php echo $product_posts[3]->guid; ?>">Read More</a>
+								 </div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+
+
+
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

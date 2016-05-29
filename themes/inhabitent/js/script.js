@@ -1,8 +1,7 @@
 jQuery(document).ready(function( $ ) {
 	
-	$(".search-submit").click(function(e){
-		e.preventDefault();
-		$(".search-field").toggle("slide").focus();
+	$(".main-navigation .search-submit").click(function(){
+		$(".main-navigation .search-field").toggle("slide").focus();
 	})
-	
+
 });

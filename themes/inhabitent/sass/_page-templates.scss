@@ -44,6 +44,10 @@
 				border-color:$inhabitent_green;
 				background-color:$inhabitent_green;
 			}
+
+			&:visited{
+				color:#000;
+			}
 		}
 
 /* Header Styles */
@@ -127,12 +131,18 @@
 			background:none;
 			width:100px
 		}
-	}
 
-	.search-field{
-		outline:none;
-		height:20px;
-		width:auto;
+		.search-submit{
+		display:inline-block;
+		cursor:pointer;
+		}
+
+		.search-field{
+			outline:none;
+			height:20px;
+			width:auto;
+			display:none;
+		}
 	}
 }
 
@@ -282,9 +292,33 @@
 
 	.latest-adventure-section{
 		
-		.latest-adventure-content{
+		.adventure-flex-1{
+			display:flex;
+			flex-flow:row nowrap;
+			
+			.adventure-flex-2{
+				flex:1 1 50%;
+				display:flex;
+				flex-flow:column nowrap;
 
+				.adventure-flex-3{
+					flex:1 1 50%;
+					display:flex;
+					flex-flow:row nowrap;
+				}
+			}
 		}
+			
+		.adventure-content{
+			flex:1 1 50%;
+			background-size:cover;
+			background-position:center;
+		}
+
+		.adventure-info{
+			margin:25px;
+		}
+	
 	}
 
 }
@@ -645,6 +679,21 @@
 		flex:1 0 60%;
 		padding-right:60px;
 	}
+
+	.search-pagination{
+		
+		.page-numbers{
+			background-color:$inhabitent_green;
+			padding:5px 10px;
+			color:#fff;
+		}
+
+		.current{
+			background-color:gray;
+			font-family:'Novecento',sans-serif;
+		}
+
+	}
 }
 
 /* Missing Page (404) Styles */
@@ -656,4 +705,22 @@
 	}
 }
 
+/* Individual Adventure Page styles */
+.single-adventure{
+	
+	.site-content{
+		max-width:100%;
+
+	#primary{
+		flex:1 0 100%;
+		}
+	}
+
+	.entry-meta{
+		text-transform:uppercase;
+		font-size:1.1em;
+		font-family:'Novecento', sans-serif;
+	}
+
+}
 
