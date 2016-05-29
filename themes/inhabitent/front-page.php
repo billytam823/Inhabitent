@@ -67,8 +67,8 @@ get_header(); ?>
 						<?php the_post_thumbnail(); ?>
 						<div class="home-journal-item-info">
 							<span><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?></span>
-							<h3><?php the_title() ?></h3>
-							<?php echo '<a href="inhabitent/'. $post->post_name .'">Read Entry</a>' ?>
+							<h3><a href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h3>
+							<a class="read-more" href="<?php echo get_permalink() ?>">Read Entry</a>
 						</div>
 					</div>
 
@@ -86,7 +86,14 @@ get_header(); ?>
 			   $product_posts = get_posts( $args ); // returns an array of posts
 			?>
 			<div class="latest-adventure-section container">
-				<h1>Latest Adventure</h1>
+				<?php 
+					echo '<pre>';
+					print_r($product_posts);
+					echo '</pre>';
+
+					echo $product_posts[2]->post_title;
+				 ?>
+				<!-- <h1>Latest Adventure</h1>
 				<div class="latest-adventure-content">
 					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 					
@@ -96,7 +103,7 @@ get_header(); ?>
 					   </div>
 
 					<?php endforeach; wp_reset_postdata(); ?>
-				</div>
+				</div> -->
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

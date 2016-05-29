@@ -92,6 +92,13 @@ function my_category_archive_title() {
 }
 add_filter('get_the_archive_title', 'my_category_archive_title');
 
+//adding my custom js script
+function my_custom_js_script(){
+	wp_enqueue_script( 'my_custom_js_script', get_template_directory_uri() . '/js/script.js');
+
+}
+add_filter('wp_enqueue_scripts', 'my_custom_js_script');
+
 /**
  * Customize excerpt length and style.
  *

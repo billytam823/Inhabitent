@@ -248,13 +248,13 @@ th {
 
 @font-face {
   font-family: 'Novecento';
-  src: url("../../build/css/fonts/Novecentosanswide-Normal.ttf") format("ttf");
+  src: url("../../build/css/fonts/novecentosanswide-normal-webfont.woff") format("woff"), url("../../build/css/fonts/novecentosanswide-normal-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Novecento';
-  src: url("../../build/css/fonts/Novecentosanswide-DemiBold.ttf") format("ttf");
+  src: url("../../build/css/fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../build/css/fonts/novecentosanswide-demibold-webfont.woff2") format("woff2");
   font-weight: 600;
   font-style: normal; }
 
@@ -331,6 +331,7 @@ html {
   box-sizing: inherit; }
 
 body {
+  font-family: "Novecento", arial, sans-serif;
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
@@ -349,7 +350,9 @@ ul, ol {
   margin: 0 0 1.5em 3em; }
 
 ul {
-  list-style: disc; }
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
 ol {
   list-style: decimal; }
@@ -379,23 +382,28 @@ a {
   text-decoration: none; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin: 50px 0 30px;
   text-transform: uppercase; }
 
 h2 {
   color: #2f1339;
   text-transform: uppercase;
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 2px; }
 
 h3 {
   color: #d99054;
   text-transform: uppercase;
-  font-size: 1.4em;
-  margin-top: 0; }
+  font-size: 1.2em;
+  letter-spacing: 3px; }
 
 i {
-  margin-right: 5px; }
+  margin-right: 10px; }
+
+p, span {
+  font-family: 'Merriweather',serif; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -470,7 +478,7 @@ a {
   a:visited {
     color: #248A83; }
   a:hover, a:focus, a:active {
-    color: #248A83; }
+    color: #000; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -618,6 +626,21 @@ a {
   margin: 0;
   list-style: none; }
 
+/* Sidebar Widget */
+.widget-area {
+  -ms-flex: 1 0 30%;
+      flex: 1 0 30%;
+  border-left: 1px solid #eee;
+  padding-top: 60px;
+  padding-left: 60px; }
+  .widget-area aside {
+    margin-bottom: 60px; }
+  .widget-area .contact-widget-paragraph i {
+    vertical-align: top;
+    margin-top: 5px; }
+  .widget-area .contact-widget-paragraph span {
+    display: inline-block; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -741,15 +764,18 @@ object {
 .page-template-page-about .site-content {
   padding-top: 0; }
 
-/* Sidebar Styles */
-.widget-area {
-  -ms-flex: 1 0 30%;
-      flex: 1 0 30%;
-  border-left: 1px solid #eee;
-  padding-left: 60px; }
-
 .day-of-week {
   font-weight: 600; }
+
+.read-more {
+  padding: 10px 15px;
+  color: #000;
+  border: 1px solid #000;
+  display: inline-block; }
+  .read-more:hover {
+    color: #fff;
+    border-color: #248A83;
+    background-color: #248A83; }
 
 /* Header Styles */
 .site-header {
@@ -802,10 +828,12 @@ object {
       border: none;
       margin-left: 20px;
       position: relative;
-      top: 12px; }
+      top: 15px; }
     .main-navigation form i {
       position: relative;
-      top: -2px; }
+      top: -2px;
+      color: #248A83;
+      font-size: 1.2em; }
     .main-navigation form button {
       border: none;
       background: none;
@@ -816,6 +844,10 @@ object {
       border: none;
       background: none;
       width: 100px; }
+  .main-navigation .search-field {
+    outline: none;
+    height: 20px;
+    width: auto; }
 
 /* Footer Styles */
 .site-footer {
@@ -888,16 +920,14 @@ object {
       border: 1px solid #ddd;
       border-top: 4px solid #ddd;
       padding: 20px 10px; }
-      .home .shop-stuff-section .shop-stuff-container .shop-stuff-item:hover {
-        border-color: #d99054; }
+      .home .shop-stuff-section .shop-stuff-container .shop-stuff-item a {
+        padding: 10px 20px;
+        background-color: #248A83;
+        color: #fff; }
+        .home .shop-stuff-section .shop-stuff-container .shop-stuff-item a:hover {
+          background-color: #19625d; }
       .home .shop-stuff-section .shop-stuff-container .shop-stuff-item img {
         width: 70px; }
-      .home .shop-stuff-section .shop-stuff-container .shop-stuff-item a {
-        text-transform: uppercase;
-        display: inline-block;
-        padding: 5px 25px;
-        color: #fff;
-        background-color: #248A83; }
 
 .home .home-journal-section h2 {
   text-align: center; }
@@ -921,31 +951,14 @@ object {
       margin-top: -7px; }
       .home .home-journal-section .home-journal-container .home-journal-item .home-journal-item-info h3 {
         color: #248A83;
-        font-size: 1.6em;
-        line-height: 1.2em; }
-      .home .home-journal-section .home-journal-container .home-journal-item .home-journal-item-info a {
-        color: #404040;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        border: 1px solid #404040; }
-
-.home .latest-adventure-section .latest-adventure-content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap; }
-  .home .latest-adventure-section .latest-adventure-content .latest-adventure-item:nth-child(1) {
-    -ms-flex: 0 1 50%;
-        flex: 0 1 50%; }
-  .home .latest-adventure-section .latest-adventure-content .latest-adventure-item:nth-child(2) {
-    -ms-flex: 0 1 25%;
-        flex: 0 1 25%; }
-  .home .latest-adventure-section .latest-adventure-content .latest-adventure-item:nth-child(3) {
-    -ms-flex: 0 1 10%;
-        flex: 0 1 10%; }
-  .home .latest-adventure-section .latest-adventure-content .latest-adventure-item:nth-child(4) {
-    -ms-flex: 0 1 10%;
-        flex: 0 1 10%; }
+        font-size: 1.3em;
+        line-height: 1.2em;
+        margin-top: 15px;
+        margin-bottom: 15px; }
+        .home .home-journal-section .home-journal-container .home-journal-item .home-journal-item-info h3 a:hover {
+          color: #000; }
+        .home .home-journal-section .home-journal-container .home-journal-item .home-journal-item-info h3 a:visited {
+          color: #248A83; }
 
 /* Blog List Page */
 .blog #primary {
@@ -1055,6 +1068,7 @@ object {
   padding-bottom: 50px;
   text-align: center; }
   .post-type-archive .product-taxonomy-links a {
+    color: #248A83;
     text-transform: uppercase;
     font-size: 1.5em;
     margin: 0 15px; }
@@ -1122,6 +1136,15 @@ object {
       font-size: 1.4em;
       display: block;
       margin-bottom: 40px; }
+  .single-product .product-container .social-media a {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    margin-right: 5px;
+    color: #000;
+    text-transform: uppercase; }
+    .single-product .product-container .social-media a:hover {
+      border-color: #248A83;
+      color: #248A83; }
 
 /* Taxonomy Page Styes */
 .tax-product_type #primary {
@@ -1176,6 +1199,22 @@ object {
 
 .page-template-page-contact h1 {
   margin-top: 0; }
+
+.page-template-page-contact form p {
+  font-family: 'Novecento' Arial, sans-serif;
+  font-size: 1.1em; }
+
+.page-template-page-contact form .submit input {
+  padding: 10px 27px;
+  background-color: #248A83;
+  color: #fff;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  font-size: 0.9em;
+  text-transform: uppercase; }
+  .page-template-page-contact form .submit input:hover {
+    background-color: #19625d; }
 
 /* Search Page Styles */
 .search #primary {

@@ -40,14 +40,16 @@
 //Fonts for Novecento Sans
 @font-face {
     font-family: 'Novecento';
-    src: url('../../build/css/fonts/Novecentosanswide-Normal.ttf') format('ttf');
+    src: url('../../build/css/fonts/novecentosanswide-normal-webfont.woff') format('woff'),
+         url('../../build/css/fonts/novecentosanswide-normal-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Novecento';
-    src: url('../../build/css/fonts/Novecentosanswide-DemiBold.ttf') format('ttf');
+    src: url('../../build/css/fonts/novecentosanswide-demibold-webfont.woff') format('woff'),
+         url('../../build/css/fonts/novecentosanswide-demibold-webfont.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
 }

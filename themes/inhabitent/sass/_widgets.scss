@@ -22,3 +22,20 @@
 	margin:0;
 	list-style:none;
 }
+
+/* Sidebar Widget */
+.widget-area{
+	flex:1 0 30%;
+	border-left: 1px solid #eee;
+	padding-top:60px;
+	padding-left:60px;
+
+	aside{
+		margin-bottom:60px;
+	}
+
+	.contact-widget-paragraph{
+		i{ vertical-align:top; margin-top:5px; }
+		span{display:inline-block;}
+	}
+}
