@@ -28,8 +28,8 @@ get_header(); ?>
 						</div>
 
 						<div class="taxonomy-product-item-info">
-							<span><?php the_title() ?></span>
-							<span><?php echo CFS()->get('price') ?></span>
+							<span class="taxonomy-product-title"><?php the_title() ?></span>
+							<span class="taxonomy-product-price">$<?php echo CFS()->get('price') ?></span>
 						</div><!-- .entry-content -->
 					</div><!-- #post-## -->
 

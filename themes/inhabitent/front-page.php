@@ -129,9 +129,8 @@ get_header(); ?>
 					</div>
 				
 				</div>
-
-
-
+			<a class="read-more read-more-adventures" href="">More Adventures</a>
+			
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

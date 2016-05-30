@@ -316,6 +316,10 @@
 	}
 
 	.latest-adventure-section{
+
+		h2{
+			text-align:center;
+		}
 		
 		.adventure-flex-1{
 			display:flex;
@@ -386,7 +390,17 @@
 				}
 			}
 		}
-	
+		
+		.read-more-adventures{
+			margin-top:20px;
+			background-color:$inhabitent_green;
+			border:none;
+			color:#fff;
+
+			&:hover{
+				background-color:#19625d;
+			}
+		}
 	}
 
 }
@@ -572,7 +586,7 @@
 				    transform: translate(-50%,-52%);
 				    width: auto;
 				}
-			}
+			}	
 
 			.product-item-info{
 				padding:5px 10px;
@@ -682,9 +696,26 @@
 			}
 
 			.taxonomy-product-item-info{
-				display:flex;
 				padding:5px 10px;
-				justify-content:space-between;
+				
+				.taxonomy-product-title{
+					padding-right:3px;
+					display:inline;
+					background:#fff;
+
+						&:before{
+					    float: left;
+ 					    width: 0;
+    					white-space: nowrap;
+    					content: ".......................................................";
+    					}
+				}
+
+				.taxonomy-product-price{
+					float:right;
+					background-color:#fff;
+				}
+
 			}
 		}
 	}

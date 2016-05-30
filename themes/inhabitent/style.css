@@ -404,7 +404,6 @@ i {
 
 p, span {
   font-family: 'Merriweather',serif;
-  margin-bottom: 1.5rem;
   line-height: 1.6em; }
 
 /*--------------------------------------------------------------
@@ -983,6 +982,9 @@ object {
         .home .home-journal-section .home-journal-container .home-journal-item .home-journal-item-info h3 a:visited {
           color: #248A83; }
 
+.home .latest-adventure-section h2 {
+  text-align: center; }
+
 .home .latest-adventure-section .adventure-flex-1 {
   display: -ms-flexbox;
   display: flex;
@@ -1038,6 +1040,14 @@ object {
     border-color: #fff; }
     .home .latest-adventure-section .adventure-info .read-more:hover {
       border-color: #248A83; }
+
+.home .latest-adventure-section .read-more-adventures {
+  margin-top: 20px;
+  background-color: #248A83;
+  border: none;
+  color: #fff; }
+  .home .latest-adventure-section .read-more-adventures:hover {
+    background-color: #19625d; }
 
 /* Blog List Page */
 .blog #primary {
@@ -1256,11 +1266,19 @@ object {
         transform: translate(-50%, -52%);
         width: auto; }
     .tax-product_type .taxonomy-product-list .taxonomy-product-item .taxonomy-product-item-info {
-      display: -ms-flexbox;
-      display: flex;
-      padding: 5px 10px;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+      padding: 5px 10px; }
+      .tax-product_type .taxonomy-product-list .taxonomy-product-item .taxonomy-product-item-info .taxonomy-product-title {
+        padding-right: 3px;
+        display: inline;
+        background: #fff; }
+        .tax-product_type .taxonomy-product-list .taxonomy-product-item .taxonomy-product-item-info .taxonomy-product-title:before {
+          float: left;
+          width: 0;
+          white-space: nowrap;
+          content: "......................................................."; }
+      .tax-product_type .taxonomy-product-list .taxonomy-product-item .taxonomy-product-item-info .taxonomy-product-price {
+        float: right;
+        background-color: #fff; }
 
 /* Contact Page Styles */
 .page-template-page-contact #primary {
