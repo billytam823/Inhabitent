@@ -763,6 +763,34 @@ object {
     background-color: #248A83;
     color: #fff; }
 
+.comments-area .comment-body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd; }
+  .comments-area .comment-body .comment-author-avatar {
+    display: inline-block;
+    margin-right: 15px; }
+  .comments-area .comment-body .comment-author {
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Merriweather", serif;
+    font-size: 1.3em; }
+
+.comments-area .submit {
+  padding: 10px 27px;
+  background-color: #248a83;
+  color: #fff;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  font-size: .9em;
+  text-transform: uppercase; }
+  .comments-area .submit:hover {
+    box-shadow: none; }
+
 .site-content {
   padding-top: 60px;
   display: -ms-flexbox;
@@ -834,6 +862,8 @@ object {
     font-family: "Novecento", Arial, sans-serif;
     color: #248A83;
     text-transform: uppercase; }
+    .main-navigation a:hover {
+      color: #000; }
   .main-navigation form {
     display: inline-block; }
     .main-navigation form fieldset {
