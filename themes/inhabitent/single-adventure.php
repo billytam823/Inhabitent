@@ -35,6 +35,8 @@ get_header(); ?>
 					<!-- Prints the Content -->
 					<div class="entry-content">
 						<?php the_content(); ?>
+						<!-- add social media component -->
+						<?php get_template_part( 'template-parts/content', 'social-media' ); ?>
 					</div>
 
 				</div>

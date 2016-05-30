@@ -23,14 +23,9 @@ get_header(); ?>
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						<span class="product-price">$<?php echo CFS()->get('price'); ?></span>
 						<?php the_content(); ?>
-						<div class="social-media">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Like
-							</a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Tweet
-							</a>
-							<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i>Pin
-							</a>
-						</div>
+						
+						<!-- add social media component -->
+						<?php get_template_part( 'template-parts/content', 'social-media' ); ?>
 					</div><!-- .entry-content -->
 
 				<?php endwhile; // End of the loop. ?>

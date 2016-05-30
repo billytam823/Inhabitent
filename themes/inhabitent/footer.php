@@ -39,7 +39,7 @@
 					</div>
 
 				</div><!-- .site-info -->
-				<span>COPYRIGHT &copy 2016 INHABITENT</span>
+				<span class="copyright">COPYRIGHT &copy 2016 INHABITENT</span>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

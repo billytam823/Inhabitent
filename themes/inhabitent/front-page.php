@@ -87,6 +87,8 @@ get_header(); ?>
 			?>
 			<div class="latest-adventure-section container">
 				
+				<h2>Latest Adventure</h2>
+
 				<div class="adventure-flex-1">
 
 					<!-- Inside First Flex Box -->	
@@ -100,24 +102,24 @@ get_header(); ?>
 					<div class="adventure-flex-2">
 
 						<!-- Inside Second Flex Box -->
-						<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+						<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[1]-> ID); ?>);">
 							 <div class="adventure-info">
-								 <h2><a href="<?php echo $product_posts[2]->guid; ?>"><?php echo $product_posts[2]->post_title; ?></a></h2>
-								 <a class="read-more" href="<?php echo $product_posts[2]->guid; ?>">Read More</a>
+								 <h2><a href="<?php echo $product_posts[1]->guid; ?>"><?php echo $product_posts[1]->post_title; ?></a></h2>
+								 <a class="read-more" href="<?php echo $product_posts[1]->guid; ?>">Read More</a>
 							 </div>
 						</div>
 						
 						<div class="adventure-flex-3">
 
 							<!-- INside Third Flex Box -->
-							<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+							<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[2]-> ID); ?>);">
 								 <div class="adventure-info">
 									 <h2><a href="<?php echo $product_posts[2]->guid; ?>"><?php echo $product_posts[2]->post_title; ?></a></h2>
 									 <a class="read-more" href="<?php echo $product_posts[2]->guid; ?>">Read More</a>
 								 </div>
 							</div>
 
-							<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[0]-> ID); ?>);">
+							<div class="adventure-content" style="background:url(<?php echo get_the_post_thumbnail_url( $product_posts[3]-> ID); ?>);">
 								 <div class="adventure-info">
 									 <h2><a href="<?php echo $product_posts[3]->guid; ?>"><?php echo $product_posts[3]->post_title; ?></a></h2>
 									 <a class="read-more" href="<?php echo $product_posts[3]->guid; ?>">Read More</a>

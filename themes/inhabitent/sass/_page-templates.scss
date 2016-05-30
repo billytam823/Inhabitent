@@ -13,6 +13,23 @@
 	margin:0 auto;
 }
 
+//Social Media Styles
+.social-media{
+	a{
+		padding:10px 20px;
+		border:1px solid #000;
+		margin-right:5px;
+		color:#000;
+		text-transform:uppercase;
+
+		&:hover{
+			border-color:$inhabitent_green;
+			background-color:$inhabitent_green;
+			color:#fff;
+		}
+	}
+}
+
 // Padding for the top navigation
 .site-content{
 	padding-top:60px;
@@ -176,6 +193,10 @@
 		text-align:center;
 		display:block;
 	}
+
+	.copyright{
+		font-family:"Novecento",sans-serif;
+	}
 }
 
 
@@ -240,6 +261,10 @@
 					width:70px;
 				}
 
+				&:hover{
+					border-color:#d99054;
+				}
+
 			}
 
 		}
@@ -295,28 +320,71 @@
 		.adventure-flex-1{
 			display:flex;
 			flex-flow:row nowrap;
+
+			.adventure-content{
+				border-right:20px solid #fff;
+			}
 			
 			.adventure-flex-2{
 				flex:1 1 50%;
 				display:flex;
 				flex-flow:column nowrap;
 
+				.adventure-content{
+					border-right:none;
+					border-bottom:20px solid #fff;
+
+					h2{font-size:1.5em;}
+				}
+
 				.adventure-flex-3{
 					flex:1 1 50%;
 					display:flex;
 					flex-flow:row nowrap;
+
+					.adventure-content:nth-child(1){
+						border-bottom:none;
+						border-right:10px solid #fff;
+
+						h2{font-size:1.4em;}
+					}
+
+					.adventure-content:nth-child(2){
+						border-bottom:none;
+						border-left:10px solid #fff;
+
+						h2{font-size:1.4em;}
+					}
 				}
 			}
 		}
 			
 		.adventure-content{
 			flex:1 1 50%;
-			background-size:cover;
-			background-position:center;
+			background-size:cover !important;
+			background-position:center !important;
+			// I Know I know using the nuke here, Ran out of time. Forgive me!
 		}
 
 		.adventure-info{
 			margin:25px;
+	
+			a{
+				color:#fff;
+				text-shadow: 1px 1px 1px #999;
+				
+				&:hover{
+					color:#f0e4d1;
+				}
+			}
+			.read-more{
+				color:#fff;
+				border-color:#fff;
+
+				&:hover{
+					border-color:$inhabitent_green;
+				}
+			}
 		}
 	
 	}
@@ -562,20 +630,6 @@
 			}
 		}
 
-		.social-media{
-			a{
-				padding:10px 20px;
-				border:1px solid #000;
-				margin-right:5px;
-				color:#000;
-				text-transform:uppercase;
-
-				&:hover{
-					border-color:$inhabitent_green;
-					color:$inhabitent_green;
-				}
-			}
-		}
 	}
 
 }
@@ -678,6 +732,14 @@
 	#primary{
 		flex:1 0 60%;
 		padding-right:60px;
+	}
+
+	.search-submit{
+		display:none;
+	}
+
+	fieldset{
+		border:none;
 	}
 
 	.search-pagination{

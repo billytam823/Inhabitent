@@ -404,7 +404,8 @@ i {
 
 p, span {
   font-family: 'Merriweather',serif;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  line-height: 1.6em; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -752,6 +753,17 @@ object {
   max-width: 900px;
   margin: 0 auto; }
 
+.social-media a {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  margin-right: 5px;
+  color: #000;
+  text-transform: uppercase; }
+  .social-media a:hover {
+    border-color: #248A83;
+    background-color: #248A83;
+    color: #fff; }
+
 .site-content {
   padding-top: 60px;
   display: -ms-flexbox;
@@ -888,6 +900,8 @@ object {
     color: #fff;
     text-align: center;
     display: block; }
+  .site-footer .copyright {
+    font-family: "Novecento",sans-serif; }
 
 /* Front page */
 .home .site-content {
@@ -935,6 +949,8 @@ object {
           background-color: #19625d; }
       .home .shop-stuff-section .shop-stuff-container .shop-stuff-item img {
         width: 70px; }
+      .home .shop-stuff-section .shop-stuff-container .shop-stuff-item:hover {
+        border-color: #d99054; }
 
 .home .home-journal-section h2 {
   text-align: center; }
@@ -972,6 +988,8 @@ object {
   display: flex;
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; }
+  .home .latest-adventure-section .adventure-flex-1 .adventure-content {
+    border-right: 20px solid #fff; }
   .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 {
     -ms-flex: 1 1 50%;
         flex: 1 1 50%;
@@ -979,6 +997,11 @@ object {
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap; }
+    .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-content {
+      border-right: none;
+      border-bottom: 20px solid #fff; }
+      .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-content h2 {
+        font-size: 1.5em; }
     .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-flex-3 {
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
@@ -986,15 +1009,35 @@ object {
       display: flex;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
+      .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-flex-3 .adventure-content:nth-child(1) {
+        border-bottom: none;
+        border-right: 10px solid #fff; }
+        .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-flex-3 .adventure-content:nth-child(1) h2 {
+          font-size: 1.4em; }
+      .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-flex-3 .adventure-content:nth-child(2) {
+        border-bottom: none;
+        border-left: 10px solid #fff; }
+        .home .latest-adventure-section .adventure-flex-1 .adventure-flex-2 .adventure-flex-3 .adventure-content:nth-child(2) h2 {
+          font-size: 1.4em; }
 
 .home .latest-adventure-section .adventure-content {
   -ms-flex: 1 1 50%;
       flex: 1 1 50%;
-  background-size: cover;
-  background-position: center; }
+  background-size: cover !important;
+  background-position: center !important; }
 
 .home .latest-adventure-section .adventure-info {
   margin: 25px; }
+  .home .latest-adventure-section .adventure-info a {
+    color: #fff;
+    text-shadow: 1px 1px 1px #999; }
+    .home .latest-adventure-section .adventure-info a:hover {
+      color: #f0e4d1; }
+  .home .latest-adventure-section .adventure-info .read-more {
+    color: #fff;
+    border-color: #fff; }
+    .home .latest-adventure-section .adventure-info .read-more:hover {
+      border-color: #248A83; }
 
 /* Blog List Page */
 .blog #primary {
@@ -1172,15 +1215,6 @@ object {
       font-size: 1.4em;
       display: block;
       margin-bottom: 40px; }
-  .single-product .product-container .social-media a {
-    padding: 10px 20px;
-    border: 1px solid #000;
-    margin-right: 5px;
-    color: #000;
-    text-transform: uppercase; }
-    .single-product .product-container .social-media a:hover {
-      border-color: #248A83;
-      color: #248A83; }
 
 /* Taxonomy Page Styes */
 .tax-product_type #primary {
@@ -1257,6 +1291,12 @@ object {
   -ms-flex: 1 0 60%;
       flex: 1 0 60%;
   padding-right: 60px; }
+
+.search .search-submit {
+  display: none; }
+
+.search fieldset {
+  border: none; }
 
 .search .search-pagination .page-numbers {
   background-color: #248A83;
