@@ -477,7 +477,7 @@ textarea {
 a {
   color: #248A83; }
   a:visited {
-    color: #248A83; }
+    color: #000; }
   a:hover, a:focus, a:active {
     color: #000; }
   a:focus {
@@ -641,6 +641,8 @@ a {
     margin-top: 5px; }
   .widget-area .contact-widget-paragraph span {
     display: inline-block; }
+  .widget-area h2 {
+    margin-top: 0px; }
 
 /*--------------------------------------------------------------
 # Content
@@ -816,8 +818,6 @@ object {
     color: #fff;
     border-color: #248A83;
     background-color: #248A83; }
-  .read-more:visited {
-    color: #000; }
 
 /* Header Styles */
 .site-header {
@@ -1061,8 +1061,7 @@ object {
 .home .latest-adventure-section .adventure-info {
   margin: 25px; }
   .home .latest-adventure-section .adventure-info a {
-    color: #fff;
-    text-shadow: 1px 1px 1px #999; }
+    color: #fff; }
     .home .latest-adventure-section .adventure-info a:hover {
       color: #f0e4d1; }
   .home .latest-adventure-section .adventure-info .read-more {
@@ -1191,6 +1190,8 @@ object {
     text-transform: uppercase;
     font-size: 1.5em;
     margin: 0 15px; }
+    .post-type-archive .product-taxonomy-links a:hover {
+      color: #000; }
 
 .post-type-archive .product-list {
   display: -ms-flexbox;

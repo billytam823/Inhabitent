@@ -102,10 +102,6 @@
 				border-color:$inhabitent_green;
 				background-color:$inhabitent_green;
 			}
-
-			&:visited{
-				color:#000;
-			}
 		}
 
 /* Header Styles */
@@ -419,7 +415,6 @@
 	
 			a{
 				color:#fff;
-				text-shadow: 1px 1px 1px #999;
 				
 				&:hover{
 					color:#f0e4d1;
@@ -600,6 +595,10 @@
 			text-transform:uppercase;
 			font-size:1.5em;
 			margin:0 15px;
+
+			&:hover{
+				color:#000;
+			}
 		}
 	}
 
