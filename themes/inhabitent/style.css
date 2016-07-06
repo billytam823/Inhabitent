@@ -803,7 +803,7 @@ object {
   margin: 0 auto; }
 
 .home .site-content,
-.page-template-page-about .site-content {
+.page-template-about .site-content {
   padding-top: 0; }
 
 .day-of-week {
@@ -1150,16 +1150,16 @@ object {
   display: none; }
 
 /* About Page Styles */
-.page-template-page-about .site-content {
+.page-template-about .site-content {
   max-width: 100%; }
-  .page-template-page-about .site-content #primary {
+  .page-template-about .site-content #primary {
     -ms-flex: 1 0 100%;
         flex: 1 0 100%; }
 
-.page-template-page-about h2 {
+.page-template-about h2 {
   text-align: center; }
 
-.page-template-page-about .about-splash {
+.page-template-about .about-splash {
   height: 800px;
   display: -ms-flexbox;
   display: flex;
@@ -1167,7 +1167,7 @@ object {
       flex-flow: column nowrap;
   -ms-flex-pack: center;
       justify-content: center; }
-  .page-template-page-about .about-splash h1 {
+  .page-template-about .about-splash h1 {
     text-align: center;
     color: #fff;
     font-size: 1.8em;

@@ -53,9 +53,18 @@ add_filter( 'login_headertitle', 'inhabitent_login_title');
 
 
 //Custom Function for setting Featured Image as Splash for About Page
-function inhabitent_about_splash_bg() {
+function inhabitent_enqueued_scripts() {
        	
-		if(!is_page_template('page-about.php')){
+       	//adds custom javascript for search function
+		wp_enqueue_script( 'my_custom_js_script', get_template_directory_uri() . '/js/script.js');
+
+		
+		//enqueues our locally supplied font awesome stylesheet
+		wp_enqueue_style('font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.css'); 
+	
+
+		//display splash for the about page
+		if(!is_page_template('about.php')){
 			return;
 		}
 
@@ -71,8 +80,10 @@ function inhabitent_about_splash_bg() {
                         background-position:bottom;
                 }";
         wp_add_inline_style( 'inhabitent-style', $custom_css );
+
+
 }
-add_action( 'wp_enqueue_scripts', 'inhabitent_about_splash_bg' );
+add_action( 'wp_enqueue_scripts', 'inhabitent_enqueued_scripts' );
 
 //Custom function to change query to display more posts altering main query
 function inhabitent_filter_product_query($query){
@@ -91,13 +102,6 @@ function my_category_archive_title() {
     return 'Shop Stuff';
 }
 add_filter('get_the_archive_title', 'my_category_archive_title');
-
-//adding my custom js script
-function my_custom_js_script(){
-	wp_enqueue_script( 'my_custom_js_script', get_template_directory_uri() . '/js/script.js');
-
-}
-add_filter('wp_enqueue_scripts', 'my_custom_js_script');
 
 /**
  * Customize excerpt length and style.
